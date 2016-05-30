@@ -4,18 +4,17 @@ branches:
   only:
   - master
 before_install:
-- openssl aes-256-cbc -K $encrypted_16f93dafa041_key -iv $encrypted_16f93dafa041_iv
-  -in id_rsa.enc -out ~/.ssh/id_rsa -d
-- chmod 600 ~/.ssh/id_rsa
-- eval $(ssh-agent)
-- ssh-add ~/.ssh/id_rsa
-- cp .travis/ssh_config ~/.ssh/config
-- git config --global user.name 'binchou'
-- git config --global user.email '992132705@qq.com'
-install:
 - npm install hexo-cli -g
+install:
 - npm install
 script:
 - hexo clean
 - hexo g
-- hexo d
+after_success:
+- git config --global user.name "binchou"
+- git config --global user.email "992132705@qq.com"
+- sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.yml
+- hexo deploy
+env:
+  global:
+    secure: oWoKxy99nnAQ8sln/vSpDqtcrOgsZ9KlE0tFNW440ZpHQ1ZMhltHTDAA3di3JzSp8g7ACiHZzVaV/Xq56f/4ssGTguTg0LiI1jKv9m/+VLPhCmkHA6Bi++gKmcaphW0BueWbZx5XHwOUpyIsuJDbFD9zn7KaeVziRDlnHpsMinEiYr8oSfW91DpeGHSKRW625X2S1elzzNkiKYq2hp3g7EluyxJwMvfYp9eWumZ67RWvlbMZDv7SXZk56prI7bU3y05U2Hn1/cBO0borRkRSfzScWFqs943aOY/Xja3mIS8/ulONigU3xDDQOlKZG+bsOIryJ/KH3UGQzQtdT91GBwMKHnNLpKVv0eXNcahwww+0ZIK0YS/ZMo4Cf0PA+gACEzPzfsf0rvoVvEqAhZbeSy1hC0BCtadn7zXkFQXEExtpR1tcnalIAbwTbWrXd3kSdR3YWlZcG7MYA9lwjSkr97uKSsqacuX4eO0L0Hg2dOWd/SaqcwigrrmHc44fJGMamFrQxDo/fUaKXmQEO1w41ZZP+QhcouA5nGwtYFZFJcvDIcAzoVt93RX+qKRWAFIqkijR+zaomEacy9mG6sdvbMk78c95SVtmUtaiZM6lxResGmF7lQ41ShSILCl90TcV7AQ/Hk1+fBfAmN9aVNA9t5F5V8fZIWQKodvQdjwNoXw=
