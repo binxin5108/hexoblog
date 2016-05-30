@@ -1,5 +1,5 @@
 ---
-title: Hello World
+title: Hello World 2016
 date: 2016-03-28 12:30:20
 categories:
 - Diary
