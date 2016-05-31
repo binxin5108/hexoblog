@@ -31,8 +31,8 @@ swiftype_key: mVhgh9GLaHL12jRnc_vZ
 # hexo sitemap网站地图
 sitemap:
 path: sitemap.xml
-baidusitemap:
-path: baidusitemap.xml
+#baidusitemap:
+#path: baidusitemap.xml
 
 # add post views
 leancloud_visitors:
