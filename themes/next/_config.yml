@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "binxin, 彬心, 彬心的博客, binxin's blog"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -15,7 +15,6 @@ rss:
 
 # Specify the date when the site was setup
 #since: 2015
-
 
 
 
@@ -270,7 +269,7 @@ mathjax:
 #google_analytics:
 
 # CNZZ count
-#cnzz_siteid:
+cnzz_siteid: 1259373745
 
 
 # Make duoshuo show UA
@@ -319,10 +318,10 @@ busuanzi_count:
   page_pv_footer:
 
 # Tencent analytics ID
-# tencent_analytics:
+tencent_analytics: 56562466
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 
 
