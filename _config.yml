@@ -30,15 +30,10 @@ swiftype_key: mVhgh9GLaHL12jRnc_vZ
 
 # hexo sitemap网站地图
 sitemap:
-path: sitemap.xml
-#baidusitemap:
-#path: baidusitemap.xml
+ path: sitemap.xml
+baidusitemap:
+ path: baidusitemap.xml
 
-# add post views
-leancloud_visitors:
-  enable: true
-  app_id: oIfRmeHySQVfnjEQF9ehI8Oc-gzGzoHsz
-  app_key: iXQsJYMwnAyLTmwT7CI6wyow
 
 
 # URL
