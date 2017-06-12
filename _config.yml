@@ -10,7 +10,7 @@ author: Binxin
 language: zh-Hans
 timezone:
 avatar: http://7xrysx.com1.z0.glb.clouddn.com/baymax.jpeg
-duoshuo_shortname: binxin
+#duoshuo_shortname: binxin
 #百度分析
 baidu_analytics: 1b18096dbcefcf28acc4edf8bcd3c797
 #google分析
@@ -20,7 +20,7 @@ google_analytics: UA-75407989-1
 #jiathis: true
 
 # 多说分享服务
-duoshuo_share: true
+#duoshuo_share: true
 
 # 多说热评文字
 #duoshuo_hotartical: true
@@ -28,8 +28,9 @@ duoshuo_share: true
 #站点搜索
 swiftype_key: mVhgh9GLaHL12jRnc_vZ
 
-
-
+#畅言
+changyan_appid: cyt3KFfCw
+changyan_appkey: 658ffcdafe740cff950a43814861c6ab
 # hexo sitemap网站地图
 sitemap:
  path: sitemap.xml
