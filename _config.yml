@@ -17,7 +17,7 @@ baidu_analytics: 1b18096dbcefcf28acc4edf8bcd3c797
 google_analytics: UA-75407989-1
 
 #jisthis分享
-#jiathis: true
+jiathis: true
 
 # 多说分享服务
 #duoshuo_share: true
