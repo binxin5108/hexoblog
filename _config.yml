@@ -29,8 +29,12 @@ google_analytics: UA-75407989-1
 swiftype_key: mVhgh9GLaHL12jRnc_vZ
 
 #畅言
-changyan_appid: cyt3KFfCw
-changyan_appkey: 658ffcdafe740cff950a43814861c6ab
+#changyan_appid: cyt3KFfCw
+#changyan_appkey: 658ffcdafe740cff950a43814861c6ab
+
+#网易跟帖
+gentie_productKey: d2e3f497eafc4a9fb9810130e395d810
+
 # hexo sitemap网站地图
 sitemap:
  path: sitemap.xml

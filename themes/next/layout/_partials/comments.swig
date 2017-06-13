@@ -13,6 +13,8 @@
       </div>
 	 {% elseif theme.changyan_appid and theme.changyan_appkey %}
        <div id="SOHUCS" ></div>
+	 {% elseif theme.gentie_productKey %}
+       <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
     {% endif %}
   </div>
 {% endif %}
