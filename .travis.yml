@@ -1,20 +1,30 @@
 language: node_js
-sudo: required
+node_js: stable
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+
+#before_script:
+ # - npm install -g gulp
+
+script:
+  - hexo g
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "binxin5108"
+  - git config user.email "992132705@qq.com"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+# E: Build LifeCycle
+
 branches:
   only:
-  - master
-before_install:
-- npm install hexo-cli -g
-install:
-- npm install
-script:
-- hexo clean
-- hexo g
-after_success:
-- git config --global user.name "binchou"
-- git config --global user.email "992132705@qq.com"
-- sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.yml
-- hexo deploy
+    - master
 env:
-  global:
-    secure: oWoKxy99nnAQ8sln/vSpDqtcrOgsZ9KlE0tFNW440ZpHQ1ZMhltHTDAA3di3JzSp8g7ACiHZzVaV/Xq56f/4ssGTguTg0LiI1jKv9m/+VLPhCmkHA6Bi++gKmcaphW0BueWbZx5XHwOUpyIsuJDbFD9zn7KaeVziRDlnHpsMinEiYr8oSfW91DpeGHSKRW625X2S1elzzNkiKYq2hp3g7EluyxJwMvfYp9eWumZ67RWvlbMZDv7SXZk56prI7bU3y05U2Hn1/cBO0borRkRSfzScWFqs943aOY/Xja3mIS8/ulONigU3xDDQOlKZG+bsOIryJ/KH3UGQzQtdT91GBwMKHnNLpKVv0eXNcahwww+0ZIK0YS/ZMo4Cf0PA+gACEzPzfsf0rvoVvEqAhZbeSy1hC0BCtadn7zXkFQXEExtpR1tcnalIAbwTbWrXd3kSdR3YWlZcG7MYA9lwjSkr97uKSsqacuX4eO0L0Hg2dOWd/SaqcwigrrmHc44fJGMamFrQxDo/fUaKXmQEO1w41ZZP+QhcouA5nGwtYFZFJcvDIcAzoVt93RX+qKRWAFIqkijR+zaomEacy9mG6sdvbMk78c95SVtmUtaiZM6lxResGmF7lQ41ShSILCl90TcV7AQ/Hk1+fBfAmN9aVNA9t5F5V8fZIWQKodvQdjwNoXw=
+ global:
+   - GH_REF: github.com/binxin5108/binxin5108.github.com.git
